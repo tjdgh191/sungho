@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 public class PhoneInfo {
 	
@@ -18,7 +18,9 @@ public class PhoneInfo {
 	public PhoneInfo(String name, String phoneNumber) 
 	{
 		
-		this(name,phoneNumber,null);
+		this.name = name;
+		this.phoneNumber = phoneNumber;
+		this.birthday = null;
 		
 	}
 	
