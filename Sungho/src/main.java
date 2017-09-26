@@ -2,11 +2,13 @@ import java.util.Scanner;
 
 public class main {
 	 static Scanner fa = new Scanner(System.in);
+	 static main mai = new main();
 	 static String nam,phone,birth;
 	 static int aa;
 		public static void main(String args[])
 		{
-			showMenu();
+			
+			mai.showMenu();
 	
 		}
 		
@@ -44,7 +46,7 @@ public class main {
 				switch(aa) 
 				{
 					case 1:
-						readData();
+						mai.readData();
 						break;
 					case 2:
 						System.out.println("프로그램이 종료됩니다.");
