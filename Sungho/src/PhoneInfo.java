@@ -2,9 +2,9 @@
 
 public class PhoneInfo {
 	
-	String name;
-	String phoneNumber; 
-    String birthday;
+	public String name;
+	public String phoneNumber; 
+    public String birthday;
 	
 	public PhoneInfo(String name, String phoneNumber, String birthday) 
 	{
