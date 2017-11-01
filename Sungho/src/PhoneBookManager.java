@@ -14,7 +14,7 @@ public class PhoneBookManager {
 		arr[index] = new PhoneInfo(name,phoneNumber,birthday);
 		arr[index].printInfo();
 		index++;
-		System.out.println("µ¥ÀÌÅÍ ÀÔ·ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+		System.out.println("ë°ì´í„° ì…ë ¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 	}
 	
 	
@@ -22,23 +22,20 @@ public class PhoneBookManager {
 	public void searchData()
 	{	
 		int ind;
-		System.out.println("µ¥ÀÌÅÍ °Ë»öÀ» ½ÃÀÛÇÕ´Ï´Ù..");
-		System.out.println("Ã£°í ½ÍÀº ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ë°ì´í„° ê²€ìƒ‰ì„ ì‹œì‘í•©ë‹ˆë‹¤..");
+		System.out.println("ì°¾ê³  ì‹¶ì€ ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		String name = ff.nextLine();
 		ind = search(name);
-<<<<<<< HEAD
+
 		if(ind < 0 && ind > 100)
-=======
-		if(ind < 0)
->>>>>>> branch 'master' of https://github.com/tjdgh191/sungho.git
 		{	
-			System.out.println("Ã£À¸·Á´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ì°¾ìœ¼ë ¤ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 			return;	
 		}
 		else
 		{
 			arr[ind].printInfo();
-			System.out.println("µ¥ÀÌÅÍ °Ë»öÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù..");
+			System.out.println("ë°ì´í„° ê²€ìƒ‰ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤..");
 		}
 		
 	}
@@ -47,13 +44,13 @@ public class PhoneBookManager {
 	public void deleteData()
 	{
 		int ind;
-		System.out.println("µ¥ÀÌÅÍ »èÁ¦¸¦ ½ÃÀÛÇÕ´Ï´Ù..");
-		System.out.println("»èÁ¦ÇÏ·Á´Â ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ë°ì´í„° ì‚­ì œë¥¼ ì‹œì‘í•©ë‹ˆë‹¤..");
+		System.out.println("ì‚­ì œí•˜ë ¤ëŠ” ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		String name = ff.nextLine();
 		ind = search(name);
 		if(ind < 0) 
 		{
-			System.out.println("»èÁ¦ÇÏ·Á´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");	
+			System.out.println("ì‚­ì œí•˜ë ¤ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");	
 			return;
 		}
 		else
@@ -64,7 +61,7 @@ public class PhoneBookManager {
 			}
 			
 			index--;
-			System.out.println("µ¥ÀÌÅÍ »èÁ¦°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù..");
+			System.out.println("ë°ì´í„° ì‚­ì œê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤..");
 		}
 	}
 	
