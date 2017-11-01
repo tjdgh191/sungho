@@ -26,7 +26,7 @@ public class PhoneBookManager {
 		System.out.println("찾고 싶은 이름을 입력해주세요.");
 		String name = ff.nextLine();
 		ind = search(name);
-		if(ind < 0)
+		if(ind < 0 && ind > 100)
 		{	
 			System.out.println("찾으려는 데이터가 없습니다.");
 			return;	
