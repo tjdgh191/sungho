@@ -17,9 +17,9 @@ public class PhoneUnivInfo extends PhoneInfo
 	
 	public void printInfo() 
 	{
-		System.out.println("ÀÌ¸§ : " + name);
-		System.out.println("ÀüÈ­¹øÈ£ : " + phoneNumber);
-		System.out.println("Àü°ø : " + major);
-		System.out.println("ÇĞ³â : " + year);
+		System.out.println("ì´ë¦„ : " + name);
+		System.out.println("ì „í™”ë²ˆí˜¸ : " + phoneNumber);
+		System.out.println("ì „ê³µ : " + major);
+		System.out.println("í•™ë…„ : " + year);
 	}
 }

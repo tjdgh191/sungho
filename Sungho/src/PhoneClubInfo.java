@@ -11,8 +11,8 @@ public class PhoneClubInfo extends PhoneInfo
 	
 	public void printInfo()
 	{
-		System.out.println("ÀÌ¸§ : " + name);
-		System.out.println("ÀüÈ­¹øÈ£ : " + phoneNumber);
-		System.out.println("µ¿¾Æ¸®¸í : " + club);
+		System.out.println("ì´ë¦„ : " + name);
+		System.out.println("ì „í™”ë²ˆí˜¸ : " + phoneNumber);
+		System.out.println("ë™ì•„ë¦¬ëª… : " + club);
 	}
 }

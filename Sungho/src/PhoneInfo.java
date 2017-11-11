@@ -26,13 +26,13 @@ public class PhoneInfo {
 	
 	public void printInfo() 
 	{
-		System.out.println("ÀÌ¸§ : " + name);
-		System.out.println("ÀüÈ­¹øÈ£ : " + phoneNumber);
+		System.out.println("ì´ë¦„: " + name);
+		System.out.println("ì „í™”ë²ˆí˜¸ : " + phoneNumber);
 		if (birthday.equals("")) 
 		{
-		System.out.println("»ıÀÏ : ¹ÌÀÔ·Â");
+		System.out.println("ìƒì¼ : ë¯¸ì…ë ¥");
 		}
-		else System.out.println("»ıÀÏ : " + birthday);
+		else System.out.println("ìƒì¼ : " + birthday);
 	}
 	
 	

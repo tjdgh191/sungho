@@ -12,9 +12,9 @@ public class PhoneCompanyInfo extends PhoneInfo
 
 	public void printInfo() 
 	{
-		System.out.println("ÀÌ¸§ : " + name);
-		System.out.println("ÀüÈ­¹øÈ£ : " + phoneNumber);
-		System.out.println("È¸»ç¸í : " + company);
+		System.out.println("ì´ë¦„ : " + name);
+		System.out.println("ì „í™”ë²ˆí˜¸ : " + phoneNumber);
+		System.out.println("íšŒì‚¬ëª… : " + company);
 	}
 }
 

@@ -17,35 +17,35 @@ public class Main {
 		public static void readData()
 		{
 			
-				System.out.println("µ¥ÀÌÅÍ ÀÔ·ÂÀ» ½ÃÀÛÇÕ´Ï´Ù..");
-				System.out.println("1.ÀÏ¹İ, 2.´ëÇĞ, 3.È¸»ç, 4.µ¿¾Æ¸®");
+				System.out.println("ë°ì´í„° ì…ë ¥ì„ ì‹œì‘í•©ë‹ˆë‹¤..");
+				System.out.println("1.ì¼ë°˜, 2.ëŒ€í•™, 3.íšŒì‚¬, 4.ë™ì•„ë¦¬");
 				int aa = fa.nextInt();
 				fa.nextLine();
 				switch(aa)
 				{
 				 case 1:
-					 	System.out.println("ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+					 	System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
 						nam = fa.nextLine();
 						
-						System.out.println("ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+						System.out.println("ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 						phone = fa.nextLine();
 						
-						System.out.println("»ıÀÏÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä // ÀÔ·Â¾ÈÇØµµ µÊ");
+						System.out.println("ìƒì¼ì„ ì…ë ¥í•˜ì„¸ìš” // ì…ë ¥ì•ˆí•´ë„ë¨");
 						birth = fa.nextLine();
 						
 						man.saveData(nam,phone,birth);
 						break;
 				 case 2:
-					 	System.out.println("ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+					 	System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
 						nam = fa.nextLine();
 						
-						System.out.println("ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+						System.out.println("ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 						phone = fa.nextLine();
 						
-						System.out.println("Àü°øÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+						System.out.println("ì „ê³µì„ ì…ë ¥í•˜ì„¸ìš”");
 						major = fa.nextLine();
 						
-						System.out.println("ÇĞ³âÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+						System.out.println("í•™ë…„ì„ ì…ë ¥í•˜ì„¸ìš”");
 						year = fa.nextInt();
 						
 						fa.nextLine();
@@ -53,25 +53,25 @@ public class Main {
 						man.saveUnivData(nam,phone,major,year);
 						break;
 				 case 3:
-					 	System.out.println("ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+					 	System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
 						nam = fa.nextLine();
 						
-						System.out.println("ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+						System.out.println("ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 						phone = fa.nextLine();
 						
-						System.out.println("È¸»ç¸íÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+						System.out.println("íšŒì‚¬ëª…ì„ ì…ë ¥í•˜ì„¸ìš”");
 						company = fa.nextLine();
 						
 						man.saveCompanyData(nam,phone,company);
 						break;
 				 case 4:
-					 	System.out.println("ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+					 	System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
 						nam = fa.nextLine();
 						
-						System.out.println("ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+						System.out.println("ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 						phone = fa.nextLine();
 						
-						System.out.println("µ¿¾Æ¸®¸íÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+						System.out.println("ë™ì•„ë¦¬ëª…ì„ ì…ë ¥í•˜ì„¸ìš”");
 						club = fa.nextLine();
 						man.saveClubData(nam,phone,club);
 						break;
@@ -87,11 +87,11 @@ public class Main {
 			
 			while(true) 
 			{
-				System.out.println("¼±ÅÃÇÏ¼¼¿ä...");
-				System.out.println("1. µ¥ÀÌÅÍ ÀÔ·Â");
-				System.out.println("2. µ¥ÀÌÅÍ °Ë»ö ");
-				System.out.println("3. µ¥ÀÌÅÍ »èÁ¦");
-				System.out.println("4. ÇÁ·Î±×·¥ Á¾·á ");
+				System.out.println("ì„ íƒí•˜ì„¸ìš”...");
+				System.out.println("1. ë°ì´í„° ì…ë ¥");
+				System.out.println("2. ë°ì´í„° ê²€ìƒ‰");
+				System.out.println("3. ë°ì´í„° ì‚­ì œ");
+				System.out.println("4. í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 				
 				
 				int aa = fa.nextInt();
@@ -109,7 +109,7 @@ public class Main {
 						man.deleteData();
 						break;
 					case 4:
-						System.out.println("ÇÁ·Î±×·¥ÀÌ Á¾·áµË´Ï´Ù.");
+						System.out.println("í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë©ë‹ˆë‹¤.");
 						return;
 					default:
 				}	
