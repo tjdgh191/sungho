@@ -17,6 +17,33 @@ public class PhoneBookManager {
 		System.out.println("데이터 입력이 완료되었습니다.");
 	}
 	
+	public void saveUnivData(String name, String phoneNumber, String major, int year) 
+	{
+		arr[index] = new PhoneUnivInfo(name,phoneNumber,major,year);
+		PhoneUnivInfo uv = new PhoneUnivInfo(name,phoneNumber,major,year);
+		uv.printInfo();
+		index++;
+		System.out.println("데이터 입력이 완료되었습니다.");
+	}
+	
+	public void saveCompanyData(String name, String phoneNumber, String company) 
+	{
+		arr[index] = new PhoneCompanyInfo(name,phoneNumber,company);
+		PhoneCompanyInfo pc = new PhoneCompanyInfo(name,phoneNumber,company);
+		pc.printInfo();
+		index++;
+		System.out.println("데이터 입력이 완료되었습니다.");
+		
+	}
+	
+	public void saveClubData(String name, String phoneNumber, String club) 
+	{
+		arr[index] = new PhoneClubInfo(name,phoneNumber,club);
+		PhoneClubInfo pcb = new PhoneClubInfo(name,phoneNumber,club);
+		pcb.printInfo();
+		index++;
+		System.out.println("데이터 입력이 완료되었습니다.");
+	}
 	
 	
 	public void searchData()
@@ -27,7 +54,7 @@ public class PhoneBookManager {
 		String name = ff.nextLine();
 		ind = search(name);
 
-		if(ind < 0 && ind > 100)
+		if(ind < 0)
 		{	
 			System.out.println("찾으려는 데이터가 없습니다.");
 			return;	
