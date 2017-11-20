@@ -11,7 +11,7 @@ public class PhoneClubInfo extends PhoneInfo
 	
 	public void printInfo()
 	{
-		System.out.println("이름 : " + name);
+		System.out.println("이름: " + name);
 		System.out.println("전화번호 : " + phoneNumber);
 		System.out.println("동아리명 : " + club);
 	}

@@ -28,11 +28,11 @@ public class PhoneInfo {
 	{
 		System.out.println("이름: " + name);
 		System.out.println("전화번호 : " + phoneNumber);
-		if (birthday.equals("")) 
+		if (!birthday.equals("")) 
 		{
-		System.out.println("생일 : 미입력");
+			System.out.println("생일 : " + birthday);
 		}
-		else System.out.println("생일 : " + birthday);
+		else System.out.println("생일 : 미입력");
 	}
 	
 	

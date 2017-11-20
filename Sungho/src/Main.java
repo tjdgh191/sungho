@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main implements PhoneInterface
+{
 	 public static Scanner fa = new Scanner(System.in);
 	 public static Main mai = new Main();
 	 public static PhoneBookManager man = new PhoneBookManager();
 	 public static String nam,phone,birth,major,company,club;
-	 public static int aa,year;
+	 public static int num,year;
+	 
 		public static void main(String args[])
 		{
 			
@@ -19,61 +21,21 @@ public class Main {
 			
 				System.out.println("데이터 입력을 시작합니다..");
 				System.out.println("1.일반, 2.대학, 3.회사, 4.동아리");
-				int aa = fa.nextInt();
+				int num = fa.nextInt();
 				fa.nextLine();
-				switch(aa)
+				switch(num)
 				{
-				 case 1:
-					 	System.out.println("이름을 입력하세요");
-						nam = fa.nextLine();
-						
-						System.out.println("전화번호를 입력하세요");
-						phone = fa.nextLine();
-						
-						System.out.println("생일을 입력하세요 // 입력안해도됨");
-						birth = fa.nextLine();
-						
-						man.saveData(nam,phone,birth);
+				 case FRIEND:
+					 	mai.friendData();
 						break;
-				 case 2:
-					 	System.out.println("이름을 입력하세요");
-						nam = fa.nextLine();
-						
-						System.out.println("전화번호를 입력하세요");
-						phone = fa.nextLine();
-						
-						System.out.println("전공을 입력하세요");
-						major = fa.nextLine();
-						
-						System.out.println("학년을 입력하세요");
-						year = fa.nextInt();
-						
-						fa.nextLine();
-						
-						man.saveUnivData(nam,phone,major,year);
+				 case UNIV:
+					 	mai.univData();
 						break;
-				 case 3:
-					 	System.out.println("이름을 입력하세요");
-						nam = fa.nextLine();
-						
-						System.out.println("전화번호를 입력하세요");
-						phone = fa.nextLine();
-						
-						System.out.println("회사명을 입력하세요");
-						company = fa.nextLine();
-						
-						man.saveCompanyData(nam,phone,company);
+				 case COMPANY:
+					 	mai.companyData();
 						break;
-				 case 4:
-					 	System.out.println("이름을 입력하세요");
-						nam = fa.nextLine();
-						
-						System.out.println("전화번호를 입력하세요");
-						phone = fa.nextLine();
-						
-						System.out.println("동아리명을 입력하세요");
-						club = fa.nextLine();
-						man.saveClubData(nam,phone,club);
+				 case CLUB:
+					 	mai.clubData();
 						break;
 				 default:
 				}
@@ -94,21 +56,21 @@ public class Main {
 				System.out.println("4. 프로그램 종료");
 				
 				
-				int aa = fa.nextInt();
+				int num = fa.nextInt();
 				fa.nextLine();
 				
-				switch(aa) 
+				switch(num) 
 				{
-					case 1:
+					case INPUT:
 						mai.readData();
 						break;
-					case 2:
+					case SEARCH:
 						man.searchData();
 						break;
-					case 3:
+					case DELETE:
 						man.deleteData();
 						break;
-					case 4:
+					case EXIT:
 						System.out.println("프로그램이 종료됩니다.");
 						return;
 					default:
@@ -116,8 +78,69 @@ public class Main {
 			
 			}
 			
+			
 		}
 		
+		
+		public void friendData()
+		{
+			System.out.println("이름을 입력하세요");
+			nam = fa.nextLine();
+			
+			System.out.println("전화번호를 입력하세요");
+			phone = fa.nextLine();
+			
+			System.out.println("생일을 입력하세요 // 입력안해도됨");
+			birth = fa.nextLine();
+			
+			man.saveData(nam,phone,birth);
+		}
+		
+		public void univData()
+		{
+			System.out.println("이름을 입력하세요");
+			nam = fa.nextLine();
+			
+			System.out.println("전화번호를 입력하세요");
+			phone = fa.nextLine();
+			
+			System.out.println("전공을 입력하세요");
+			major = fa.nextLine();
+			
+			System.out.println("학년을 입력하세요");
+			year = fa.nextInt();
+			
+			fa.nextLine();
+			
+			man.saveUnivData(nam,phone,major,year);
+		}
+		
+		public void companyData()
+		{
+			System.out.println("이름을 입력하세요");
+			nam = fa.nextLine();
+			
+			System.out.println("전화번호를 입력하세요");
+			phone = fa.nextLine();
+			
+			System.out.println("회사명을 입력하세요");
+			company = fa.nextLine();
+			
+			man.saveCompanyData(nam,phone,company);
+		}
+		
+		public void clubData()
+		{
+			System.out.println("이름을 입력하세요");
+			nam = fa.nextLine();
+			
+			System.out.println("전화번호를 입력하세요");
+			phone = fa.nextLine();
+			
+			System.out.println("동아리명을 입력하세요");
+			club = fa.nextLine();
+			man.saveClubData(nam,phone,club);
+		}
 		
 }
 

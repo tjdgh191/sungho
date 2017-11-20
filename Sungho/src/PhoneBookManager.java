@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
-public class PhoneBookManager {
+public class PhoneBookManager implements PhoneInterface {
 	Scanner ff = new Scanner(System.in);
-	final int MAX = 100;
 	PhoneInfo[] arr = new PhoneInfo[MAX];
 	int index,cnt = 0;
 	
@@ -20,8 +19,7 @@ public class PhoneBookManager {
 	public void saveUnivData(String name, String phoneNumber, String major, int year) 
 	{
 		arr[index] = new PhoneUnivInfo(name,phoneNumber,major,year);
-		PhoneUnivInfo uv = new PhoneUnivInfo(name,phoneNumber,major,year);
-		uv.printInfo();
+		arr[index].printInfo();
 		index++;
 		System.out.println("데이터 입력이 완료되었습니다.");
 	}
@@ -29,8 +27,7 @@ public class PhoneBookManager {
 	public void saveCompanyData(String name, String phoneNumber, String company) 
 	{
 		arr[index] = new PhoneCompanyInfo(name,phoneNumber,company);
-		PhoneCompanyInfo pc = new PhoneCompanyInfo(name,phoneNumber,company);
-		pc.printInfo();
+		arr[index].printInfo();
 		index++;
 		System.out.println("데이터 입력이 완료되었습니다.");
 		
@@ -39,8 +36,7 @@ public class PhoneBookManager {
 	public void saveClubData(String name, String phoneNumber, String club) 
 	{
 		arr[index] = new PhoneClubInfo(name,phoneNumber,club);
-		PhoneClubInfo pcb = new PhoneClubInfo(name,phoneNumber,club);
-		pcb.printInfo();
+		arr[index].printInfo();
 		index++;
 		System.out.println("데이터 입력이 완료되었습니다.");
 	}
