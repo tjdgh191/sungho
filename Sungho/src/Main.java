@@ -139,6 +139,7 @@ public class Main implements PhoneInterface
 			
 			System.out.println("동아리명을 입력하세요");
 			club = fa.nextLine();
+			
 			man.saveClubData(nam,phone,club);
 		}
 		
