@@ -1,7 +1,8 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class PhoneBookManager implements PhoneInterface {
 	Scanner ff = new Scanner(System.in);
+	HashSet<String> hash = new HashSet<String>();
 	PhoneInfo[] arr = new PhoneInfo[MAX];
 	int index,cnt = 0;
 	
@@ -10,7 +11,7 @@ public class PhoneBookManager implements PhoneInterface {
 	
 	public void saveData(String name, String phoneNumber, String birthday) 
 	{
-		arr[index] = new PhoneInfo(name,phoneNumber,birthday);
+		arr[index] = (new PhoneInfo(name,phoneNumber,birthday));
 		arr[index].printInfo();
 		index++;
 		System.out.println("데이터 입력이 완료되었습니다.");

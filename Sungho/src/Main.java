@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.InputMismatchException;
 public class Main implements PhoneInterface
 {
 	 public static Scanner fa = new Scanner(System.in);
@@ -38,8 +38,10 @@ public class Main implements PhoneInterface
 					 	mai.clubData();
 						break;
 				 default:
+					 System.out.println("없는 번호입니다.");
 				}
-				
+			
+			
 				
 		}
 		
@@ -47,36 +49,45 @@ public class Main implements PhoneInterface
 		public static void showMenu()
 		{
 			
-			while(true) 
-			{
-				System.out.println("선택하세요...");
-				System.out.println("1. 데이터 입력");
-				System.out.println("2. 데이터 검색");
-				System.out.println("3. 데이터 삭제");
-				System.out.println("4. 프로그램 종료");
-				
-				
-				int num = fa.nextInt();
-				fa.nextLine();
-				
-				switch(num) 
+				while(true) 
 				{
-					case INPUT:
-						mai.readData();
-						break;
-					case SEARCH:
-						man.searchData();
-						break;
-					case DELETE:
-						man.deleteData();
-						break;
-					case EXIT:
-						System.out.println("프로그램이 종료됩니다.");
-						return;
-					default:
-				}	
+						
+						System.out.println("선택하세요...");
+						System.out.println("1. 데이터 입력");
+						System.out.println("2. 데이터 검색");
+						System.out.println("3. 데이터 삭제");
+						System.out.println("4. 프로그램 종료");
+				
+					try
+					{	
+						int num = fa.nextInt();
+						fa.nextLine();
+						
+						switch(num) 
+						{
+							case INPUT:
+								mai.readData();
+								break;
+							case SEARCH:
+								man.searchData();
+								break;
+							case DELETE:
+								man.deleteData();
+								break;
+							case EXIT:
+								System.out.println("프로그램이 종료됩니다.");
+								return;
+							default:
+								System.out.println("없는 번호입니다.");
+						}
+					}
+					catch(InputMismatchException ie)
+					{
+						fa = new Scanner(System.in);
+						System.out.println("숫자만 입력가능합니다.");
+					}
+				}
 			
-			}
 			
 			
 		}
@@ -106,13 +117,19 @@ public class Main implements PhoneInterface
 			
 			System.out.println("전공을 입력하세요");
 			major = fa.nextLine();
-			
+		try
+		{
 			System.out.println("학년을 입력하세요");
 			year = fa.nextInt();
-			
 			fa.nextLine();
-			
 			man.saveUnivData(nam,phone,major,year);
+		}	
+		catch(InputMismatchException ie)
+		{
+			fa = new Scanner(System.in);
+			System.out.println("학년은 숫자입니다.");
+		}
+			
 		}
 		
 		public void companyData()
